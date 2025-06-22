@@ -74,7 +74,7 @@ export default function HeroSection() {
     <Hero id="home">
       <Slogan>eTechlo — מפתחים הצלחה במהירוטקלו</Slogan>
       <Subtitle>פתרונות טכנולוגיים מתקדמים לעסקים: פיתוח אתרים, מערכות פנימיות, ייעוץ טכנולוגי, אוטומציה ועוד.</Subtitle>
-      <CTAButton href="#contact">Let's Talk</CTAButton>
+      <CTAButton href="#contact">בואו נדבר</CTAButton>
     </Hero>
   );
 } 

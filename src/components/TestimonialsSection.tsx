@@ -306,7 +306,7 @@ export default function TestimonialsSection() {
                 </CardHeader>
 
                 <TestimonialText>
-                  "{testimonial.text}"
+                  <q>{testimonial.text}</q>
                 </TestimonialText>
 
                 <ClientInfo>

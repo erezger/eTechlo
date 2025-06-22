@@ -1,5 +1,4 @@
 import styles from "./page.module.css";
-import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import ServicesSection from "../components/ServicesSection";
 import ProcessSection from "../components/ProcessSection";
