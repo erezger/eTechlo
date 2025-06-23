@@ -1,33 +1,30 @@
 "use client";
 import { FaUsers, FaRocket, FaHandshake } from "react-icons/fa";
 import { Section, SectionTitle, Container, Content, Subtitle, Description, Features, Feature, FeatureIcon, FeatureText, ImageContainer, StyledImage } from "./AboutSection.styles";
+import { useTranslations } from 'next-intl';
 
 export default function AboutSection() {
+  const t = useTranslations('AboutSection');
   return (
     <Section id="about" $bg="#fff">
-      <SectionTitle>אודות eTechlo</SectionTitle>
-      <Subtitle>מפתחים הצלחה במהירוטקלו</Subtitle>
+      <SectionTitle>{t('title')}</SectionTitle>
+      <Subtitle>{t('slogan')}</Subtitle>
       <Container>
         <Content>
-          <Description>
-            eTechlo היא חברת פיתוח תוכנה המתמחה בבניית פתרונות טכנולוגיים מתקדמים לעסקים.
-            אנחנו מאמינים שטכנולוגיה צריכה להיות נגישה, יעילה ומותאמת אישית לכל עסק.
-          </Description>
-          <Description>
-            עם ניסיון של שנים בתעשיית ההייטק, הצוות שלנו משלב ידע טכני מתקדם עם הבנה עמוקה של צרכי העסק כדי ליצור פתרונות שמביאים תוצאות אמיתיות.
-          </Description>
+          <Description>{t('desc1')}</Description>
+          <Description>{t('desc2')}</Description>
           <Features>
             <Feature>
               <FeatureIcon><FaUsers /></FeatureIcon>
-              <FeatureText>צוות מקצועי עם ניסיון של שנים</FeatureText>
+              <FeatureText>{t('features.0')}</FeatureText>
             </Feature>
             <Feature>
               <FeatureIcon><FaRocket /></FeatureIcon>
-              <FeatureText>פתרונות חדשניים וטכנולוגיות מתקדמות</FeatureText>
+              <FeatureText>{t('features.1')}</FeatureText>
             </Feature>
             <Feature>
               <FeatureIcon><FaHandshake /></FeatureIcon>
-              <FeatureText>ליווי אישי ושותפות ארוכת טווח</FeatureText>
+              <FeatureText>{t('features.2')}</FeatureText>
             </Feature>
           </Features>
         </Content>

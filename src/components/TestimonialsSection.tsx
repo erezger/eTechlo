@@ -2,6 +2,7 @@
 import { FaStar, FaQuoteLeft } from "react-icons/fa";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { useTranslations } from 'next-intl';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -23,50 +24,17 @@ import {
   SwiperContainer,
 } from "./TestimonialsSection.styles";
 
-const testimonials = [
-  {
-    id: 1,
-    text: "eTechlo הפכה את החזון שלנו למציאות. הצוות המקצועי שלהם בנה לנו מערכת ניהול מתקדמת שחוסכת לנו שעות עבודה בכל שבוע. התקשורת הייתה מצוינת והתוצאה מעבר לציפיות.",
-    name: "דוד כהן",
-    position: "מנכ\"ל",
-    company: "טכנולוגיות מתקדמות בע\"מ",
-    rating: 5
-  },
-  {
-    id: 2,
-    text: "עבדנו עם eTechlo על פרויקט מורכב של אוטומציה עסקית. הם הבינו בדיוק מה אנחנו צריכים והעבירו אותנו תהליך מקצועי ומסודר. התוצאה מדהימה - חיסכון של 40% בזמן עיבוד.",
-    name: "שרה לוי",
-    position: "מנהלת IT",
-    company: "חברת ייצור גלובלית",
-    rating: 5
-  },
-  {
-    id: 3,
-    text: "האתר החדש ש-eTechlo בנתה עבורנו הביא לעלייה של 60% בהמרות. העיצוב מודרני, מהיר ומותאם למובייל. הצוות היה זמין לכל שאלה ותמיכה לאורך כל התהליך.",
-    name: "מיכאל רוזנברג",
-    position: "מנהל שיווק",
-    company: "רשת קמעונאית ישראלית",
-    rating: 5
-  },
-  {
-    id: 4,
-    text: "eTechlo סיפקו לנו ייעוץ טכנולוגי מעולה שעזר לנו לבחור את הפתרון הנכון לעסק שלנו. הם לא רק מוכרים שירותים - הם שותפים אמיתיים להצלחה שלנו.",
-    name: "נועה אברהם",
-    position: "מייסדת",
-    company: "סטארט-אפ חדשני",
-    rating: 5
-  },
-  {
-    id: 5,
-    text: "המערכת הפנימית ש-eTechlo פיתחה עבורנו שינתה את הדרך שבה אנחנו עובדים. התהליך היה חלק, מקצועי והתוצאה מעולה. ממליץ בחום לכל עסק שמחפש פתרונות טכנולוגיים.",
-    name: "יוסי שפירא",
-    position: "מנהל תפעול",
-    company: "חברת לוגיסטיקה",
-    rating: 5
-  }
-];
-
 export default function TestimonialsSection() {
+  const t = useTranslations('TestimonialsSection');
+  const testimonials = [0, 1, 2, 3, 4].map(idx => ({
+    id: idx + 1,
+    text: t(`testimonials.${idx}.text`),
+    name: t(`testimonials.${idx}.name`),
+    position: t(`testimonials.${idx}.position`),
+    company: t(`testimonials.${idx}.company`),
+    rating: 5
+  }));
+
   const renderStars = (rating: number) => (
     <Stars>{Array.from({ length: rating }).map((_, i) => <FaStar key={i} />)}</Stars>
   );
@@ -74,8 +42,8 @@ export default function TestimonialsSection() {
 
   return (
     <Section id="testimonials">
-      <SectionTitle>מה הלקוחות שלנו אומרים</SectionTitle>
-      <Subtitle>אנחנו גאים בשותפויות ארוכות טווח עם לקוחות מרוצים. הנה מה שיש להם לומר על העבודה שלנו.</Subtitle>
+      <SectionTitle>{t('title')}</SectionTitle>
+      <Subtitle>{t('subtitle')}</Subtitle>
       <SwiperContainer>
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}

@@ -5,5 +5,148 @@
     "services": "Services",
     "testimonials": "Testimonials",
     "contact": "Contact"
+  },
+  "HeroSection": {
+    "title": "eTechlo — Developing Success at the Speed of Techlo",
+    "subtitle": "Advanced technology solutions for businesses: website development, internal systems, tech consulting, automation, and more.",
+    "cta": "Let's Talk"
+  },
+  "AboutSection": {
+    "title": "About eTechlo",
+    "slogan": "Developing Success at the Speed of Techlo",
+    "desc1": "eTechlo is a software development company specializing in building advanced technology solutions for businesses. We believe technology should be accessible, efficient, and tailored to every business.",
+    "desc2": "With years of experience in the high-tech industry, our team combines advanced technical knowledge with a deep understanding of business needs to create solutions that deliver real results.",
+    "features": [
+      "Professional team with years of experience",
+      "Innovative solutions and advanced technologies",
+      "Personal guidance and long-term partnership"
+    ]
+  },
+  "ServicesSection": {
+    "title": "Our Services",
+    "cards": [
+      {
+        "title": "Website Development",
+        "desc": "Building modern, fast, and custom websites for your business."
+      },
+      {
+        "title": "Internal Systems",
+        "desc": "Development of management systems, CRM, ERP, and internal automations."
+      },
+      {
+        "title": "Tech Consulting",
+        "desc": "Guidance, consulting, and technological direction for businesses at any stage."
+      },
+      {
+        "title": "Automation / DevOps",
+        "desc": "Implementing DevOps processes, automation, and business process improvement."
+      }
+    ]
+  },
+  "ContactSection": {
+    "title": "Contact Us",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "submit": "Send Message",
+      "submitting": "Sending..."
+    },
+    "success": "Your message has been sent successfully!",
+    "info": {
+      "phoneTitle": "Phone",
+      "phoneValue": "+972-50-123-4567",
+      "emailTitle": "Email",
+      "emailValue": "info@etechlo.com",
+      "addressTitle": "Address",
+      "addressValue": "Tel Aviv, Israel"
+    },
+    "social": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    }
+  },
+  "ProcessSection": {
+    "title": "Our Process",
+    "subtitle": "How we turn ideas into digital success:",
+    "steps": [
+      {
+        "title": "Discovery & Strategy",
+        "desc": "Understanding needs, defining goals, and creating a tailored action plan for each client."
+      },
+      {
+        "title": "Design & UX",
+        "desc": "Modern, user-friendly interface design, wireframes, and UX for success."
+      },
+      {
+        "title": "Agile Development",
+        "desc": "Professional development with the latest technologies, ensuring high-quality, flexible code."
+      },
+      {
+        "title": "Testing & Quality",
+        "desc": "Thorough testing throughout to ensure a stable, fast, and bug-free product."
+      },
+      {
+        "title": "Launch & Support",
+        "desc": "Go-live, ongoing support, and guidance for your success."
+      }
+    ]
+  },
+  "TestimonialsSection": {
+    "title": "What Our Clients Say",
+    "subtitle": "We're proud of our long-term partnerships with satisfied clients. Here's what they have to say about working with us.",
+    "testimonials": [
+      {
+        "text": "eTechlo turned our vision into reality. Their professional team built us an advanced management system that saves us hours of work every week. The communication was excellent and the results exceeded expectations.",
+        "name": "David Cohen",
+        "position": "CEO",
+        "company": "Advanced Technologies Ltd."
+      },
+      {
+        "text": "We worked with eTechlo on a complex business automation project. They understood exactly what we needed and guided us through a professional and organized process. The result is amazing - 40% time savings in processing.",
+        "name": "Sarah Levy",
+        "position": "IT Director",
+        "company": "Global Manufacturing Co."
+      },
+      {
+        "text": "The new website eTechlo built for us led to a 60% increase in conversions. The design is modern, fast, and mobile-friendly. The team was available for any question and support throughout the process.",
+        "name": "Michael Rosenberg",
+        "position": "Marketing Manager",
+        "company": "Israeli Retail Chain"
+      },
+      {
+        "text": "eTechlo provided us with excellent technological consulting that helped us choose the right solution for our business. They don't just sell services - they're true partners in our success.",
+        "name": "Noa Abraham",
+        "position": "Founder",
+        "company": "Innovative Startup"
+      },
+      {
+        "text": "The internal system eTechlo developed for us changed the way we work. The process was smooth, professional, and the result is excellent. Highly recommend to any business looking for technological solutions.",
+        "name": "Yossi Shapira",
+        "position": "Operations Manager",
+        "company": "Logistics Company"
+      }
+    ]
+  },
+  "Footer": {
+    "slogan": "Advanced software solutions for businesses. From vision to digital reality.",
+    "navTitle": "Quick Navigation",
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About",
+      "testimonials": "Testimonials",
+      "contact": "Contact"
+    },
+    "contactTitle": "Contact Info",
+    "email": "info@etechlo.com",
+    "phone": "+972-50-1234567",
+    "copyright": "All rights reserved.",
+    "social": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "twitter": "Twitter"
+    }
   }
 }

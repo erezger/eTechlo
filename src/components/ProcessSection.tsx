@@ -1,6 +1,7 @@
 "use client";
 import { FaLightbulb, FaPencilRuler, FaCode, FaCheckCircle, FaRocket } from "react-icons/fa";
 import { Section, SectionTitle, Card, Subtitle, StepsGrid, StepIcon, StepTitle, StepDesc } from "./ProcessSection.styles";
+import { useTranslations } from 'next-intl';
 
 const steps = [
   {
@@ -31,16 +32,17 @@ const steps = [
 ];
 
 export default function ProcessSection() {
+  const t = useTranslations('ProcessSection');
   return (
     <Section id="process" $bg="#fff">
-      <SectionTitle>התהליך שלנו</SectionTitle>
-      <Subtitle>כך אנחנו הופכים רעיונות למציאות דיגיטלית מוצלחת:</Subtitle>
+      <SectionTitle>{t('title')}</SectionTitle>
+      <Subtitle>{t('subtitle')}</Subtitle>
       <StepsGrid>
         {steps.map((step, idx) => (
           <Card key={idx} $bg="var(--color-background)">
             <StepIcon>{step.icon}</StepIcon>
-            <StepTitle>{step.title}</StepTitle>
-            <StepDesc>{step.desc}</StepDesc>
+            <StepTitle>{t(`steps.${idx}.title`)}</StepTitle>
+            <StepDesc>{t(`steps.${idx}.desc`)}</StepDesc>
           </Card>
         ))}
       </StepsGrid>
