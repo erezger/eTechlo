@@ -148,5 +148,13 @@
       "github": "GitHub",
       "twitter": "Twitter"
     }
+  },
+  "seo": {
+    "title": "eTechlo — Developing Success at the Speed of Techlo",
+    "description": "eTechlo: Website development, internal systems, tech consulting, and automation for businesses.",
+    "ogTitle": "eTechlo — Developing Success at the Speed of Techlo",
+    "ogDescription": "eTechlo: Website development, internal systems, tech consulting, and automation for businesses.",
+    "siteName": "eTechlo",
+    "locale": "en_US"
   }
 }
