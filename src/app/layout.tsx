@@ -4,6 +4,8 @@ import StyledComponentsRegistry from "../lib/StyledComponentsRegistry";
 import { Assistant, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { getLocale } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const assistant = Assistant({ subsets: ["hebrew"], variable: "--font-assistant" });
@@ -22,13 +24,15 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://etechlo.com"),
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const locale = await getLocale();
   return (
-    <html lang="he">
+    <html lang={locale}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:type" content="website" />
@@ -38,9 +42,11 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} ${assistant.variable}`} style={{ direction: 'rtl' }}>
         <StyledComponentsRegistry>
-          <Header />
-          {children}
-          <Footer />
+          <NextIntlClientProvider>
+            <Header />
+            {children}
+            <Footer />
+          </NextIntlClientProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
