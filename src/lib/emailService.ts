@@ -22,7 +22,8 @@ export async function sendEmail({ from, to, subject, html }: SendEmailOptions) {
       success: true as const,
       result,
     };
-  } catch (error: any) {
+  } catch (error) {
+    console.error(error);
     return {
       success: false as const,
       error,

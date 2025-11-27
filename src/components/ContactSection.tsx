@@ -66,6 +66,7 @@ export default function ContactSection() {
         setStatus(t("error") || "אופס, משהו השתבש – נסה שוב או שלח ל-info@etechlo.com");
       }
     } catch (error) {
+      console.error(error);
       setStatus(t("error") || "אופס, משהו השתבש – נסה שוב או שלח ל-info@etechlo.com");
     } finally {
       setIsSubmitting(false);

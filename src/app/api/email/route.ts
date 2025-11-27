@@ -19,7 +19,6 @@ export async function POST(request: Request) {
       html: getContactLeadEmail({ name, email, phone, message }),
     });
 
-
     // 2. אישור אוטומטי ללקוח – זהב!
     await sendEmail({
       to: email,
@@ -32,6 +31,7 @@ export async function POST(request: Request) {
       ? NextResponse.json({ success: true })
       : NextResponse.json({ success: false }, { status: 500 });
   } catch (error) {
+    console.error(error);
     return NextResponse.json({ success: false }, { status: 500 });
   }
 }
