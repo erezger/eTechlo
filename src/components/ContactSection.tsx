@@ -32,7 +32,7 @@ export default function ContactSection() {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
+  const [status, setStatus] = useState<string>(""); // הוספנו state להודעות
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -44,12 +44,32 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
+    setIsSubmitting(true);
+    setStatus(""); // נקה הודעות קודמות
+    try {
+      const response = await fetch("/api/email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus(t("success")); // "ההודעה נשלחה בהצלחה!"
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        }); // נקה טופס
+        setTimeout(() => setStatus(""), 5000); // הסתר הודעה אחרי 5 שניות
+      } else {
+        setStatus(t("error") || "אופס, משהו השתבש – נסה שוב או שלח ל-info@etechlo.com");
+      }
+    } catch (error) {
+      setStatus(t("error") || "אופס, משהו השתבש – נסה שוב או שלח ל-info@etechlo.com");
+    } finally {
       setIsSubmitting(false);
-      setShowSuccess(true);
-      setFormData({ name: '', email: '', phone: '', message: '' });
-      setTimeout(() => setShowSuccess(false), 3000);
-    }, 1200);
+    }
   };
 
   return (
@@ -57,7 +77,11 @@ export default function ContactSection() {
       <SectionTitle>{t('title')}</SectionTitle>
       <Container>
         <ContactForm onSubmit={handleSubmit}>
-          {showSuccess && <SuccessMessage>{t('success')}</SuccessMessage>}
+          {status && (
+            <SuccessMessage>
+              {status}
+            </SuccessMessage>
+          )}
           <FormGroup>
             <Label htmlFor="name">{t('form.name')}</Label>
             <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
