@@ -1,3 +1,4 @@
+import Script from 'next/script'; // ודא שאתה מייבא את זה בראש הקובץ!
 import "./globals.css";
 import StyledComponentsRegistry from "../lib/StyledComponentsRegistry";
 import { Assistant, Inter } from "next/font/google";
@@ -18,10 +19,31 @@ export default async function RootLayout({
   const messages = (await import(`../../messages/${locale}.json`)).default;
   const seo = messages.seo;
   const dir = locale === 'he' ? 'rtl' : 'ltr';
+  const GA_TRACKING_ID = 'G-G0HRY7ZHBV'; // החלף את XXXXXXX בקוד המעקב שלך!
 
   return (
     <html lang={locale} dir={dir}>
       <head>
+        {/*
+          1. טוען את הסקריפט הראשי של Google Tag Manager
+          strategy="afterInteractive" מבטיח טעינה אסינכרונית ואופטימלית למהירות.
+        */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+        />
+        {/*
+          2. הגדרת ה-dataLayer והקונפיגורציה
+        */}
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}');
+          `}
+        </Script>
+        {/* ... שאר תגיות ה-head ... */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{seo.title}</title>
         <meta name="description" content={seo.description} />
