@@ -56,7 +56,7 @@
     "success": "Your message has been sent successfully!",
     "info": {
       "phoneTitle": "Phone",
-      "phoneValue": "+972-50-123-4567",
+      "phoneValue": "054-2103145",
       "emailTitle": "Email",
       "emailValue": "info@etechlo.com",
       "addressTitle": "Address",
@@ -145,7 +145,7 @@
     },
     "contactTitle": "Contact Info",
     "email": "info@etechlo.com",
-    "phone": "+972-50-1234567",
+    "phone": "054-2103145",
     "copyright": "All rights reserved.",
     "social": {
       "linkedin": "LinkedIn",
@@ -154,10 +154,10 @@
     }
   },
   "seo": {
-    "title": "eTechlo — Developing Success at the Speed of Techlo",
-    "description": "eTechlo: Website development, internal systems, tech consulting, and automation for businesses.",
-    "ogTitle": "eTechlo — Developing Success at the Speed of Techlo",
-    "ogDescription": "eTechlo: Website development, internal systems, tech consulting, and automation for businesses.",
+    "title": "eTechlo Software House: Custom Software Development, CRM/ERP & Business Automation",
+    "description": "Advanced software solutions for businesses: Experts in custom internal systems development, automation, DevOps, and modern web solutions. Get a consultation and start saving time and money.",
+    "ogTitle": "eTechlo: Custom Software Development, CRM/ERP & Business Automation",
+    "ogDescription": "Specializing in custom management system development, DevOps implementation, and workflow optimization. Contact us for an initial consultation.",
     "siteName": "eTechlo",
     "locale": "en_US"
   }

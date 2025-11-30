@@ -57,7 +57,7 @@
     "success": "ההודעה נשלחה בהצלחה!",
     "info": {
       "phoneTitle": "טלפון",
-      "phoneValue": "+972-50-123-4567",
+      "phoneValue": "054-2103145",
       "emailTitle": "אימייל",
       "emailValue": "info@etechlo.com",
       "addressTitle": "כתובת",
@@ -110,7 +110,7 @@
     },
     "contactTitle": "יצירת קשר",
     "email": "info@etechlo.com",
-    "phone": "+972-50-1234567",
+    "phone": "054-2103145",
     "copyright": "כל הזכויות שמורות.",
     "social": {
       "linkedin": "LinkedIn",
@@ -155,10 +155,10 @@
     ]
   },
   "seo": {
-    "title": "eTechlo — מפתחים הצלחה במהירוטקלו",
-    "description": "eTechlo: פיתוח אתרים, מערכות פנימיות, ייעוץ טכנולוגי ואוטומציה לעסקים.",
-    "ogTitle": "eTechlo — מפתחים הצלחה במהירוטקלו",
-    "ogDescription": "eTechlo: פיתוח אתרים, מערכות פנימיות, ייעוץ טכנולוגי ואוטומציה לעסקים.",
+    "title": "בית תוכנה eTechlo: פיתוח תוכנה, מערכות CRM/ERP ואוטומציה עסקית",
+    "description": "פתרונות תוכנה מתקדמים לעסקים: מומחים בפיתוח מערכות פנים מותאמות אישית, אוטומציה, DevOps ופיתוח אתרים. קבל ייעוץ והתחל לחסוך זמן וכסף.",
+    "ogTitle": "eTechlo: פיתוח תוכנה, מערכות CRM/ERP ואוטומציה עסקית",
+    "ogDescription": "מומחים בפיתוח מערכות ניהול מותאמות אישית, הטמעת DevOps וייעול תהליכי עבודה. צרו קשר לייעוץ ראשוני.",
     "siteName": "eTechlo",
     "locale": "he_IL"
   }
