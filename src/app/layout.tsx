@@ -19,7 +19,7 @@ export default async function RootLayout({
   const messages = (await import(`../../messages/${locale}.json`)).default;
   const seo = messages.seo;
   const dir = locale === 'he' ? 'rtl' : 'ltr';
-  const GA_TRACKING_ID = 'G-G0HRY7ZHBV'; // החלף את XXXXXXX בקוד המעקב שלך!
+  const GA_TRACKING_ID = process.env.GA_TRACKIND_ID; // החלף את XXXXXXX בקוד המעקב שלך!
 
   return (
     <html lang={locale} dir={dir}>

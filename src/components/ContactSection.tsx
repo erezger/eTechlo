@@ -22,6 +22,7 @@ import {
   InfoCard,
 } from "./ContactSection.styles";
 import { useTranslations } from 'next-intl';
+import { trackLeadConversion } from '@/utils/analytics';
 
 export default function ContactSection() {
   const t = useTranslations('ContactSection');
@@ -54,6 +55,8 @@ export default function ContactSection() {
       });
 
       if (response.ok) {
+        // שלב 2: אם השליחה הצליחה, שלח אירוע ל-GA4
+        trackLeadConversion();
         setStatus(t("success")); // "ההודעה נשלחה בהצלחה!"
         setFormData({
           name: '',
