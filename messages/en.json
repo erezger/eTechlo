@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About Us",
     "services": "Services",
+    "tech": "Tech Stack",
     "testimonials": "Testimonials",
     "contact": "Contact"
   },
@@ -40,6 +41,91 @@
       {
         "title": "Automation / DevOps",
         "desc": "Implementing DevOps processes, automation, and business process improvement."
+      }
+    ]
+  },
+  "TechSection": {
+    "title": "Technologies We Use",
+    "items": [
+      {
+        "id": "react",
+        "label": "React"
+      },
+      {
+        "id": "nextjs",
+        "label": "Next.js"
+      },
+      {
+        "id": "nodejs",
+        "label": "Node.js"
+      },
+      {
+        "id": "typescript",
+        "label": "TypeScript"
+      },
+      {
+        "id": "postgresql",
+        "label": "PostgreSQL"
+      },
+      {
+        "id": "docker",
+        "label": "Docker"
+      },
+      {
+        "id": "aws",
+        "label": "AWS"
+      },
+      {
+        "id": "angular",
+        "label": "Angular"
+      },
+      {
+        "id": "vuejs",
+        "label": "Vue.js"
+      },
+      {
+        "id": "python",
+        "label": "Python"
+      },
+      {
+        "id": "java",
+        "label": "Java (Spring)"
+      },
+      {
+        "id": "csharp",
+        "label": "C# (.NET)"
+      },
+      {
+        "id": "nestjs",
+        "label": "NestJS"
+      },
+      {
+        "id": "expressjs",
+        "label": "Express.js"
+      },
+      {
+        "id": "graphql",
+        "label": "GraphQL"
+      },
+      {
+        "id": "mysql",
+        "label": "MySQL"
+      },
+      {
+        "id": "mongodb",
+        "label": "MongoDB"
+      },
+      {
+        "id": "kubernetes",
+        "label": "Kubernetes"
+      },
+      {
+        "id": "terraform",
+        "label": "Terraform"
+      },
+      {
+        "id": "git",
+        "label": "Git"
       }
     ]
   },
@@ -140,6 +226,7 @@
       "home": "Home",
       "services": "Services",
       "about": "About",
+      "tech": "Tech Stack",
       "testimonials": "Testimonials",
       "contact": "Contact"
     },

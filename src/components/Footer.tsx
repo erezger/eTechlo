@@ -19,6 +19,7 @@ export default function Footer() {
           <FooterLink href="#home">{t('nav.home')}</FooterLink>
           <FooterLink href="#services">{t('nav.services')}</FooterLink>
           <FooterLink href="#about">{t('nav.about')}</FooterLink>
+          <FooterLink href="#tech">{t('nav.tech')}</FooterLink>
           <FooterLink href="#testimonials">{t('nav.testimonials')}</FooterLink>
           <FooterLink href="#contact">{t('nav.contact')}</FooterLink>
         </FooterColumn>

@@ -3,6 +3,7 @@
     "home": "דף הבית",
     "about": "אודותינו",
     "services": "שירותים",
+    "tech": "טכנולוגיות",
     "testimonials": "המלצות",
     "contact": "צור קשר"
   },
@@ -41,6 +42,91 @@
       {
         "title": "אוטומציה / DevOps",
         "desc": "הטמעת תהליכי DevOps, אוטומציה ושיפור תהליכים עסקיים."
+      }
+    ]
+  },
+  "TechSection": {
+    "title": "הטכנולוגיות שבהן אנחנו משתמשים",
+    "items": [
+      {
+        "id": "react",
+        "label": "React"
+      },
+      {
+        "id": "nextjs",
+        "label": "Next.js"
+      },
+      {
+        "id": "nodejs",
+        "label": "Node.js"
+      },
+      {
+        "id": "typescript",
+        "label": "TypeScript"
+      },
+      {
+        "id": "postgresql",
+        "label": "PostgreSQL"
+      },
+      {
+        "id": "docker",
+        "label": "Docker"
+      },
+      {
+        "id": "aws",
+        "label": "AWS"
+      },
+      {
+        "id": "angular",
+        "label": "Angular"
+      },
+      {
+        "id": "vuejs",
+        "label": "Vue.js"
+      },
+      {
+        "id": "python",
+        "label": "Python"
+      },
+      {
+        "id": "java",
+        "label": "Java (Spring)"
+      },
+      {
+        "id": "csharp",
+        "label": "C# (.NET)"
+      },
+      {
+        "id": "nestjs",
+        "label": "NestJS"
+      },
+      {
+        "id": "expressjs",
+        "label": "Express.js"
+      },
+      {
+        "id": "graphql",
+        "label": "GraphQL"
+      },
+      {
+        "id": "mysql",
+        "label": "MySQL"
+      },
+      {
+        "id": "mongodb",
+        "label": "MongoDB"
+      },
+      {
+        "id": "kubernetes",
+        "label": "Kubernetes"
+      },
+      {
+        "id": "terraform",
+        "label": "Terraform"
+      },
+      {
+        "id": "git",
+        "label": "Git"
       }
     ]
   },
@@ -105,6 +191,7 @@
       "home": "ראשי",
       "services": "שירותים",
       "about": "אודות",
+      "tech": "טכנולוגיות",
       "testimonials": "המלצות",
       "contact": "צור קשר"
     },
