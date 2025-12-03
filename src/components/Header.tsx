@@ -49,6 +49,8 @@ export default function Header() {
           <NavLink href="#about" onClick={closeMenu} $isScrolled={isScrolled}>{t('about')}</NavLink>
           <NavLink href="#services" onClick={closeMenu} $isScrolled={isScrolled}>{t('services')}</NavLink>
           <NavLink href="#tech" onClick={closeMenu} $isScrolled={isScrolled}>{t('tech')}</NavLink>
+          <NavLink href="/case-studies" onClick={closeMenu} $isScrolled={isScrolled}>{t('caseStudies')}</NavLink>
+          <NavLink href="#pricing" onClick={closeMenu} $isScrolled={isScrolled}>{t('pricing')}</NavLink>
           <NavLink href="#testimonials" onClick={closeMenu} $isScrolled={isScrolled}>{t('testimonials')}</NavLink>
           <NavLink href="#contact" onClick={closeMenu} $isScrolled={isScrolled}>{t('contact')}</NavLink>
           <NavLink href="#" onClick={toggleLocale} $isScrolled={isScrolled}><InfoIcon><FaLanguage /></InfoIcon></NavLink>

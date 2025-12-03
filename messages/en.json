@@ -4,6 +4,8 @@
     "about": "About Us",
     "services": "Services",
     "tech": "Tech Stack",
+    "caseStudies": "Case Studies",
+    "pricing": "Pricing",
     "testimonials": "Testimonials",
     "contact": "Contact"
   },
@@ -183,6 +185,94 @@
       }
     ]
   },
+  "CaseStudiesSection": {
+    "title": "Featured Case Studies",
+    "subtitle": "Real projects where we helped clients save time, increase revenue, and improve their digital systems.",
+    "pageTitle": "Case Studies",
+    "pageSubtitle": "A deeper look at how we help companies move from idea to a working, measurable solution.",
+    "viewAll": "View All Case Studies",
+    "items": [
+      {
+        "title": "Manufacturing company CRM & process automation",
+        "industry": "Manufacturing",
+        "summary": "Custom CRM and workflow automation that reduced manual work and increased visibility across departments.",
+        "metrics": [
+          "40% reduction in processing time",
+          "Centralized data instead of 5 different spreadsheets"
+        ],
+        "details": [
+          "Replaced legacy Excel and email-based flows with a modern internal web system.",
+          "Integrated with existing ERP for automatic data sync.",
+          "Introduced role-based dashboards for management and operations."
+        ]
+      },
+      {
+        "title": "E‑commerce website rebuild & optimization",
+        "industry": "E‑commerce",
+        "summary": "A fast, mobile-first storefront with modern UX that significantly improved conversion rates.",
+        "metrics": [
+          "60% increase in conversions after launch",
+          "30% faster average page load time"
+        ],
+        "details": [
+          "Migrated to a modern stack with SSR and SEO optimizations.",
+          "Improved product discovery with better filters and search.",
+          "Connected analytics and events to measure marketing performance."
+        ]
+      },
+      {
+        "title": "Startup MVP platform and cloud infrastructure",
+        "industry": "Startup",
+        "summary": "End‑to‑end MVP build including architecture, development, and deployment to production.",
+        "metrics": [
+          "Delivered first version in under 10 weeks",
+          "99.9% uptime in the first 6 months"
+        ],
+        "details": [
+          "Designed scalable architecture with modern cloud services.",
+          "Implemented CI/CD and monitoring from day one.",
+          "Worked closely with founders to iterate quickly based on feedback."
+        ]
+      }
+    ]
+  },
+  "PricingSection": {
+    "title": "Pricing & Engagement Models",
+    "subtitle": "Transparent pricing tailored to your stage and needs. Exact final price depends on scope and complexity.",
+    "cta": "Request a custom quote",
+    "plans": [
+      {
+        "name": "Starter Website",
+        "price": "From $2,500",
+        "note": "Ideal for small businesses needing a modern, fast marketing site.",
+        "features": [
+          "Up to 5 core pages (Home, About, Services, Contact, etc.)",
+          "Responsive design and basic SEO setup",
+          "Contact form with email integration"
+        ]
+      },
+      {
+        "name": "Business Systems",
+        "price": "From $6,000",
+        "note": "For internal systems, dashboards, and light automation.",
+        "features": [
+          "Custom internal web app (CRM/ERP/portal)",
+          "Role-based access and data models",
+          "Integrations with your existing tools (where possible)"
+        ]
+      },
+      {
+        "name": "Full Solution / Long‑term",
+        "price": "Custom",
+        "note": "For complex products, ongoing development and DevOps.",
+        "features": [
+          "Dedicated development for your product or platform",
+          "Architecture, DevOps, monitoring and optimization",
+          "Flexible retainer or project-based model"
+        ]
+      }
+    ]
+  },
   "TestimonialsSection": {
     "title": "What Our Clients Say",
     "subtitle": "We're proud of our long-term partnerships with satisfied clients. Here's what they have to say about working with us.",
@@ -227,6 +317,8 @@
       "services": "Services",
       "about": "About",
       "tech": "Tech Stack",
+      "caseStudies": "Case Studies",
+      "pricing": "Pricing",
       "testimonials": "Testimonials",
       "contact": "Contact"
     },

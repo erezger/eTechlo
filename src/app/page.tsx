@@ -2,6 +2,8 @@ import styles from "./page.module.css";
 import HeroSection from "../components/HeroSection";
 import ServicesSection from "../components/ServicesSection";
 import TechSection from "../components/TechSection";
+import CaseStudiesSection from "../components/CaseStudiesSection";
+import PricingSection from "../components/PricingSection";
 import ProcessSection from "../components/ProcessSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import AboutSection from "../components/AboutSection";
@@ -22,6 +24,12 @@ export default function Home() {
         </AnimatedSection>
         <AnimatedSection>
           <TechSection />
+        </AnimatedSection>
+        <AnimatedSection>
+          <CaseStudiesSection />
+        </AnimatedSection>
+        <AnimatedSection>
+          <PricingSection />
         </AnimatedSection>
         <AnimatedSection>
           <ProcessSection />
