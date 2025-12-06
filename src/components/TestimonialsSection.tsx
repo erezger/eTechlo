@@ -63,6 +63,7 @@ export default function TestimonialsSection() {
               spaceBetween: 30,
             },
           }}
+          dir="ltr"
         >
           {testimonials.map((t) => (
             <SwiperSlide key={t.id}>

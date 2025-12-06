@@ -59,6 +59,7 @@ export default function TechSection() {
           // autoplay={{ delay: 5000, disableOnInteraction: false }}
           // pagination={{ clickable: true }}
           navigation
+          dir="ltr"
           breakpoints={{
             640: {
               slidesPerView: 5,

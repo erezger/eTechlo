@@ -141,7 +141,7 @@ export const SwiperContainer = styled.div`
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     transition: all 0.2s ease;
     top: 50%;
-    transform: translateY(-70%);
+    transform: translateY(-50%);
     &:after {
         font-size: 0.9rem;
         font-weight: 900;
@@ -152,10 +152,10 @@ export const SwiperContainer = styled.div`
     }
   }
   .swiper-button-prev {
-    right: 0px;
+    left: 0px;
   }
   .swiper-button-next {
-    left: 0px;
+    right: 0px;
   }
   @media (max-width: 768px) {
     padding: 0;
