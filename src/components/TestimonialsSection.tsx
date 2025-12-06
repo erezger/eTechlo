@@ -41,7 +41,7 @@ export default function TestimonialsSection() {
   const getInitials = (name: string) => name.split(' ').map(n => n[0]).join('').toUpperCase();
 
   return (
-    <Section id="testimonials">
+    <Section id="testimonials" $bg="#fff">
       <SectionTitle>{t('title')}</SectionTitle>
       <Subtitle>{t('subtitle')}</Subtitle>
       <SwiperContainer>

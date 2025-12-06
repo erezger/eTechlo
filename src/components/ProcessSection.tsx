@@ -34,7 +34,7 @@ const steps = [
 export default function ProcessSection() {
   const t = useTranslations('ProcessSection');
   return (
-    <Section id="process" $bg="#fff">
+    <Section id="process">
       <SectionTitle>{t('title')}</SectionTitle>
       <Subtitle>{t('subtitle')}</Subtitle>
       <StepsGrid>

@@ -40,7 +40,7 @@ export default function TechSection() {
   }));
 
   return (
-    <Section id="tech">
+    <Section id="tech" $bg="#fff">
       <SectionTitle>{t("title")}</SectionTitle>
       {/* <TechGrid>
         {techItems.map((item: { id: string; label: string }) => (
