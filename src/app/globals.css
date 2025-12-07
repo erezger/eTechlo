@@ -44,3 +44,77 @@ a {
     color-scheme: dark;
   }
 }
+
+/* ======================================= */
+/* כללי עיצוב גלובליים לתוכן מאמרים (Blog) */
+/* ======================================= */
+
+/* רווח בסיסי מסביב לתוכן הראשי */
+.blog-content-container {
+  padding: 30px 20px;
+  max-width: 800px;
+  /* רוחב מקסימלי נוח לקריאה */
+  margin: 0 auto;
+  /* מרכוז */
+  line-height: 1.6;
+  /* רווח שורות נוח */
+  color: #333;
+  /* צבע טקסט בסיסי */
+}
+
+/* כותרות משנה (H2) */
+.blog-content-container h2 {
+  font-size: 2em;
+  /* גודל כפול */
+  font-weight: bold;
+  margin-top: 40px;
+  /* רווח גדול לפני כותרת */
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  /* קו הפרדה עדין */
+  padding-bottom: 5px;
+}
+
+/* כותרות משנה קטנות יותר (H3) */
+.blog-content-container h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* פסקאות ורשימות */
+.blog-content-container p,
+.blog-content-container ul,
+.blog-content-container ol {
+  margin-bottom: 20px;
+}
+
+/* טבלאות */
+.blog-content-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+}
+
+.blog-content-container th,
+.blog-content-container td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: right;
+}
+
+.blog-content-container th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+/* ציטוטים (Blockquotes - אם יש) */
+.blog-content-container blockquote {
+  border-right: 5px solid #007bff;
+  /* קו כחול צדדי */
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin: 20px 0;
+  font-style: italic;
+}
