@@ -13,11 +13,11 @@ export async function generateStaticParams() {
 }
 
 // 2. פונקציית יצירת המטא-דאטה (ל-SEO)
-type Props = {
-  params: { slug: string }; // ה-slug נשלף אוטומטית כפרמטר
-};
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
