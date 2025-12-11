@@ -14,11 +14,12 @@ export async function generateStaticParams() {
 }
 
 // 1. generateMetadata - קורא ל-API
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+
   // קורא לפוסט: אם 404, הפונקציה תחזיר null, ואז נחזיר Metadata ריקה
   const t = await getTranslations('blogSection'); // טוען את הטקסט הסטטי
   // const { slug } = await params
-  const { slug } = params
+  const { slug } = await params;
   const post = await getPostBySlug(slug);
 
   if (!post) {
@@ -42,10 +43,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 // 3. הקומפוננטה הראשית שמציגה את המאמר (מתוקנת)
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   // ניגשים ל-params בבטחה:
   // const { slug } = await params
-  const { slug } = params
+  const { slug } = await params;
   const post = await getPostBySlug(slug);
 
   if (!post) {
