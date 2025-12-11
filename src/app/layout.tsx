@@ -6,6 +6,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getLocale } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
+import ReactQueryProvider from '@/providers/ReactQueryProvider';
+import { Toaster } from 'react-hot-toast';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const assistant = Assistant({ subsets: ["hebrew"], variable: "--font-assistant" });
@@ -55,13 +57,18 @@ export default async function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${inter.variable} ${assistant.variable}`} style={{ direction: dir }}>
-        <StyledComponentsRegistry>
-          <NextIntlClientProvider messages={messages} locale={locale}>
-            <Header />
-            {children}
-            <Footer />
-          </NextIntlClientProvider>
-        </StyledComponentsRegistry>
+        <ReactQueryProvider>
+          <StyledComponentsRegistry>
+            <NextIntlClientProvider messages={messages} locale={locale}>
+              <Header />
+              {children}
+              <Footer />
+            </NextIntlClientProvider>
+          </StyledComponentsRegistry>
+
+          {/* **מיקום ה-Toast Provider:** */}
+          <Toaster />
+        </ReactQueryProvider>
       </body>
     </html>
   );

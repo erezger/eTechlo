@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiNextdotjs, SiTypescript, SiPostgresql, SiDocker, SiAmazon, SiPython, SiSpring, SiAngular, SiVuedotjs, SiDotnet, SiNestjs, SiExpress, SiGraphql, SiMysql, SiMongodb, SiKubernetes, SiGit, SiTerraform } from "react-icons/si";
-import { useTranslations } from "next-intl";
-import { Section, SectionTitle, Card, TechIcon, TechName } from "./TechSection.styles";
+import { FaReact, FaNodeJs } from 'react-icons/fa';
+import { SiNextdotjs, SiTypescript, SiPostgresql, SiDocker, SiAmazon, SiPython, SiSpring, SiAngular, SiVuedotjs, SiDotnet, SiNestjs, SiExpress, SiGraphql, SiMysql, SiMongodb, SiKubernetes, SiGit, SiTerraform } from 'react-icons/si';
+import { useTranslations } from 'next-intl';
+import { Section, SectionTitle, Card, TechIcon, TechName } from './TechSection.styles';
 import { JSX } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { SwiperContainer } from './TestimonialsSection.styles';
+import { SwiperContainer } from './testimonials/TestimonialsSection.styles';
 
 const techIconMap: Record<string, JSX.Element> = {
   react: <FaReact />,
@@ -33,7 +33,7 @@ const techIconMap: Record<string, JSX.Element> = {
 };
 
 export default function TechSection() {
-  const t = useTranslations("TechSection");
+  const t = useTranslations('TechSection');
   const techItems = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19].map(idx => ({
     id: t(`items.${idx}.id`),
     label: t(`items.${idx}.label`),

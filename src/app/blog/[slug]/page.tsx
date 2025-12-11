@@ -1,64 +1,50 @@
-import { getPostBySlug, BLOG_POSTS } from '@/data/blog-posts';
-import { notFound } from 'next/navigation';
+import { redirect } from 'next/navigation';
 // --- מחק את השורה הבאה: import { use } from 'react';
-import ReactMarkdown from 'react-markdown';
 import type { Metadata } from 'next';
-import Link from 'next/link';
-// ודא שגם Link מיובא אם אתה משתמש בו
+import { getPostBySlug } from '@/app/api/posts.client';
+import BlogPostContent from '@/components/blog/BlogPostContent';
+import { getTranslations } from 'next-intl/server';
 
-// 1. הפונקציה שמייצרת את ה-URLs מראש
-export async function generateStaticParams() {
-  return BLOG_POSTS.map((post) => ({
-    slug: post.slug,
-  }));
-}
-
-// 2. generateMetadata - השתמש ב-PageProps
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export async function generateMetadata(props: any): Promise<Metadata> {
-
-  // ניגשים ל-params בבטחה:
-  const params = props.params as { slug: string };
-  const post = getPostBySlug(params.slug);
+// 1. generateMetadata - קורא ל-API
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  // קורא לפוסט: אם 404, הפונקציה תחזיר null, ואז נחזיר Metadata ריקה
+  const t = await getTranslations('blogSection'); // טוען את הטקסט הסטטי
+  const { slug } = await params
+  const post = await getPostBySlug(slug);
 
   if (!post) {
-    return {};
+    return { title: t('notFound') }; // מחזירים אובייקט ריק כדי לא לקרוס
   }
+  // בחירת השדה הדינמי לפי השפה:
+  // נניח שאתה מקבל את ה-locale דרך ה-params או ה-cookies אם זה לא דף שפה ייעודי
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const locale = (params as any).locale || 'he';
+  const titleKey = locale === 'en' ? 'title_en' : 'title_he';
+  const title = post[titleKey] || post.title_he; // מחזיר עברית כברירת מחדל
 
+  // **הערה:** הנחתי ש-content_he משמש ל-description
   return {
-    title: post.title + ' | eTechlo Blog',
-    description: post.metaDescription,
+    title: title + ' | eTechlo Blog',
+    description: post.content_he.substring(0, 160),
     alternates: {
-      canonical: `https://www.etechlo.com/blog/${params.slug}`,
+      canonical: `https://www.etechlo.com/blog/${slug}`,
     },
   };
 }
 
 // 3. הקומפוננטה הראשית שמציגה את המאמר (מתוקנת)
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function BlogPostPage(props: any) {
+export default async function BlogPostPage(props: any) {
   // ניגשים ל-params בבטחה:
   const params = props.params as { slug: string };
-  const post = getPostBySlug(params.slug);
+  const { slug } = await params
+  const post = await getPostBySlug(slug);
 
   if (!post) {
-    notFound();
+    redirect('/blog');
   }
 
   return (
-    <main className="pt-16">
-      <div className="container mx-auto max-w-4xl p-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-800 font-semibold">
-          ← חזרה לבלוג
-        </Link>
-      </div>
-      <article className="blog-content-container text-right">
-        <h1 className="text-4xl font-extrabold mb-4">{post.title}</h1>
-        <p className="text-gray-500 mb-8 border-b pb-4">פורסם בתאריך: {post.date}</p>
-
-        <ReactMarkdown>{post.content}</ReactMarkdown>
-      </article>
-      {/* ... (CTA) ... */}
-    </main>
+    <BlogPostContent post={post}></BlogPostContent>
   );
 }

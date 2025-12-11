@@ -1,24 +1,12 @@
-import styled from "styled-components";
-import { Section } from "./shared/Section";
-import { SectionTitle } from "./shared/SectionTitle";
-import { Container } from "./shared/Container";
-import { Card as BaseCard } from "./shared/Card";
+import styled from 'styled-components';
+import { Section } from '../shared/Section';
+import { SectionTitle } from '../shared/SectionTitle';
+import { Container } from '../shared/Container';
+import { Card as BaseCard } from '../shared/Card';
 
 export { Section, SectionTitle, Container };
 
 export const Card = BaseCard;
-
-export const TestimonialCard = styled(BaseCard)`
-  padding: 2rem 1.5rem;
-  border-radius: 2rem;
-  box-shadow: 0 6px 32px rgba(27, 42, 73, 0.10);
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.25rem;
-  min-height: 220px;
-`;
 
 export const Subtitle = styled.p`
   font-size: 1.2rem;

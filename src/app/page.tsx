@@ -5,7 +5,7 @@ import TechSection from "../components/TechSection";
 import CaseStudiesSection from "../components/CaseStudiesSection";
 import PricingSection from "../components/PricingSection";
 import ProcessSection from "../components/ProcessSection";
-import TestimonialsSection from "../components/TestimonialsSection";
+import TestimonialsSection from "../components/testimonials/TestimonialsSection";
 import AboutSection from "../components/AboutSection";
 import ContactSection from "../components/ContactSection";
 import AnimatedSection from "../components/AnimatedSection";

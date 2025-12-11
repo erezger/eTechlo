@@ -239,75 +239,23 @@
   "PricingSection": {
     "title": "Pricing & Engagement Models",
     "subtitle": "Transparent pricing tailored to your stage and needs. Exact final price depends on scope and complexity.",
-    "cta": "Request a custom quote",
-    "plans": [
-      {
-        "name": "Starter Website",
-        "price": "From $2,500",
-        "note": "Ideal for small businesses needing a modern, fast marketing site.",
-        "features": [
-          "Up to 5 core pages (Home, About, Services, Contact, etc.)",
-          "Responsive design and basic SEO setup",
-          "Contact form with email integration"
-        ]
-      },
-      {
-        "name": "Business Systems",
-        "price": "From $6,000",
-        "note": "For internal systems, dashboards, and light automation.",
-        "features": [
-          "Custom internal web app (CRM/ERP/portal)",
-          "Role-based access and data models",
-          "Integrations with your existing tools (where possible)"
-        ]
-      },
-      {
-        "name": "Full Solution / Long‑term",
-        "price": "Custom",
-        "note": "For complex products, ongoing development and DevOps.",
-        "features": [
-          "Dedicated development for your product or platform",
-          "Architecture, DevOps, monitoring and optimization",
-          "Flexible retainer or project-based model"
-        ]
-      }
-    ]
+    "cta": "Request a custom quote"
   },
   "TestimonialsSection": {
     "title": "What Our Clients Say",
-    "subtitle": "We're proud of our long-term partnerships with satisfied clients. Here's what they have to say about working with us.",
-    "testimonials": [
-      {
-        "text": "eTechlo turned our vision into reality. Their professional team built us an advanced management system that saves us hours of work every week. The communication was excellent and the results exceeded expectations.",
-        "name": "David Cohen",
-        "position": "CEO",
-        "company": "Advanced Technologies Ltd."
-      },
-      {
-        "text": "We worked with eTechlo on a complex business automation project. They understood exactly what we needed and guided us through a professional and organized process. The result is amazing - 40% time savings in processing.",
-        "name": "Sarah Levy",
-        "position": "IT Director",
-        "company": "Global Manufacturing Co."
-      },
-      {
-        "text": "The new website eTechlo built for us led to a 60% increase in conversions. The design is modern, fast, and mobile-friendly. The team was available for any question and support throughout the process.",
-        "name": "Michael Rosenberg",
-        "position": "Marketing Manager",
-        "company": "Israeli Retail Chain"
-      },
-      {
-        "text": "eTechlo provided us with excellent technological consulting that helped us choose the right solution for our business. They don't just sell services - they're true partners in our success.",
-        "name": "Noa Abraham",
-        "position": "Founder",
-        "company": "Innovative Startup"
-      },
-      {
-        "text": "The internal system eTechlo developed for us changed the way we work. The process was smooth, professional, and the result is excellent. Highly recommend to any business looking for technological solutions.",
-        "name": "Yossi Shapira",
-        "position": "Operations Manager",
-        "company": "Logistics Company"
-      }
-    ]
+    "subtitle": "We're proud of our long-term partnerships with satisfied clients. Here's what they have to say about working with us."
+  },
+  "blogSection": {
+    "sectionTitle": "Blog",
+    "sectionSubtitle": "Tech Insights and Market Reports",
+    "backLink": "← Back to Blog",
+    "postLink": "The full article",
+    "publishedOn": "Published on:",
+    "loading": "...Loading Articles",
+    "errorFetch": "Error fetching blog from the server. Please try again later.",
+    "notFound": "404 - Post Not Found",
+    "notPostFound": "There are no posts yet",
+    "ctaButton": "Got a Project? Let's Talk About It"
   },
   "Footer": {
     "slogan": "Advanced software solutions for businesses. From vision to digital reality.",
