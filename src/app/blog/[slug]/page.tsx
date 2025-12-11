@@ -5,11 +5,18 @@ import { getPostBySlug } from '@/app/api/posts.client';
 import BlogPostContent from '@/components/blog/BlogPostContent';
 import { getTranslations } from 'next-intl/server';
 
+// Interface עזר לטיפוסי ה-Props (כדי למנוע שגיאות any)
+interface BlogPostPageProps {
+  params: { slug: string };
+  // searchParams?: { [key: string]: string | string[] | undefined }; // אם יש
+}
+
 // 1. generateMetadata - קורא ל-API
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   // קורא לפוסט: אם 404, הפונקציה תחזיר null, ואז נחזיר Metadata ריקה
   const t = await getTranslations('blogSection'); // טוען את הטקסט הסטטי
-  const { slug } = await params
+  // const { slug } = await params
+  const { slug } = params
   const post = await getPostBySlug(slug);
 
   if (!post) {
@@ -33,11 +40,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 // 3. הקומפוננטה הראשית שמציגה את המאמר (מתוקנת)
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default async function BlogPostPage(props: any) {
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
   // ניגשים ל-params בבטחה:
-  const params = props.params as { slug: string };
-  const { slug } = await params
+  // const { slug } = await params
+  const { slug } = params
   const post = await getPostBySlug(slug);
 
   if (!post) {
