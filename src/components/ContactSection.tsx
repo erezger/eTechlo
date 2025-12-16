@@ -1,6 +1,6 @@
 "use client";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Section,
   SectionTitle,
@@ -23,19 +23,74 @@ import {
 } from "./ContactSection.styles";
 import { useTranslations } from 'next-intl';
 import { trackLeadConversion } from '@/utils/analytics';
+import { usePricingContext } from '@/context/PricingContext';
+import { useSearchParams } from 'next/navigation';
 
 export default function ContactSection() {
   const t = useTranslations('ContactSection');
+  const { selectedPackage } = usePricingContext(); // מקור 1: Context (מדף הבית)
+  const searchParams = useSearchParams(); // מקור 2: URL Query (מדף Pricing)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     message: ''
   });
+  const [isPrefilled, setIsPrefilled] = useState(false); // <--- State חדש למעקב
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<string>(""); // הוספנו state להודעות
 
+  // 🛑 לוגיקה קריטית: עדכון ה-State כשה-Context משתנה
+  useEffect(() => {
+    // 1. קביעת המקור: Context מקבל קדימות, אחרת נשתמש ב-URL
+    const packageFromContext = selectedPackage;
+    const packageFromUrl = searchParams.get('package');
+
+    // 2. בחירת שם החבילה: (Context > Query)
+    const selectedPackageName = packageFromContext || packageFromUrl;
+
+    // 3. אם יש חבילה, בצע Pre-fill
+    if (selectedPackageName) {
+      const packageMessage = t('prefillMessage', { package: selectedPackageName });
+      setFormData(prevData => {
+        let newMessage = prevData.message;
+
+        // 1. אם כבר מולא אוטומטית (המצב הנוכחי הוא Pre-fill)
+        // או אם ההודעה הנוכחית ריקה לחלוטין - אנו מחליפים אותה.
+        if (isPrefilled || prevData.message === '') {
+          newMessage = packageMessage;
+          setIsPrefilled(true); // מסמנים שוב שזה מילוי אוטומטי
+        }
+
+        return {
+          ...prevData,
+          message: newMessage
+        };
+      });
+    } else if (isPrefilled) {
+      // אם אין חבילה נבחרה כרגע, אבל היינו במצב Pre-fill, ננקה את ההודעה.
+      setFormData(prevData => ({
+        ...prevData,
+        message: '' // או שתחזיר להודעה דיפולטית אם יש
+      }));
+      setIsPrefilled(false);
+    }
+
+    // 4. לוגיקת גלילה (חובה לניווט מ-Pricing)
+    // אם הגענו עם hash ב-URL, גלול אוטומטית. (הערה: קוד זה אמור להיות בדף ה-page.tsx העוטף, אבל נכניס אותו כאן לשם פשטות זמנית)
+    if (window.location.hash === '#contact') {
+      const element = document.getElementById('contact');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [selectedPackage, searchParams, t, isPrefilled]); // תלויות ב-Context ובפונקציית התרגום
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    // אם המשתמש משנה את שדה ההודעה, נסמן שזה כבר לא Pre-fill
+    if (e.target.name === 'message') {
+      setIsPrefilled(false);
+    }
     setFormData({
       ...formData,
       [e.target.name]: e.target.value

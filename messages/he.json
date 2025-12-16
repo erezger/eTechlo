@@ -158,7 +158,8 @@
     "EmailSend": {
       "success": "Your message has been sent successfully! We'll get back to you soon.",
       "error": "Oops, something went wrong. Please try again or email us at info@etechlo.com"
-    }
+    },
+    "prefillMessage": "אני מעוניין/ת לקבל פרטים נוספים על חבילת {package}. נא ליצור איתי קשר בהקדם."
   },
   "ProcessSection": {
     "title": "התהליך שלנו",
@@ -238,9 +239,10 @@
     ]
   },
   "PricingSection": {
-    "title": "תמחור ומודלי עבודה",
+    "title": "החבילות שלנו",
     "subtitle": "תמחור שקוף שמותאם לשלב ולצרכים של העסק. המחיר הסופי נקבע לפי היקף ומורכבות הפרויקט.",
-    "cta": "קבל הצעת מחיר מותאמת"
+    "cta": "קבל הצעת מחיר מותאמת",
+    "viewAll": "לכל החבילות"
   },
   "TestimonialsSection": {
     "title": "מה הלקוחות שלנו אומרים",

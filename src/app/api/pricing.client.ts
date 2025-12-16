@@ -12,6 +12,22 @@ export interface PricingPackage {
 }
 
 /**
+ * משיכת חבילות תמחור.
+ * @param featuredOnly - אם true, שולף רק חבילות מומלצות.
+ */
+export async function getPricingPackages(featuredOnly: boolean = false): Promise<PricingPackage[]> {
+  let url = '/pricing';
+
+  if (featuredOnly) {
+    // אם featuredOnly=true, שולח את פרמטר ה-Query
+    url = '/pricing?featured=true';
+  }
+
+  const response = await apiClient.get(url);
+  return response.data;
+}
+
+/**
 * משיכת חבילות התמחור הראשיות (isFeatured: true).
 */
 export async function getFeaturedPackages(): Promise<PricingPackage[]> {

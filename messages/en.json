@@ -157,7 +157,8 @@
     "EmailSend": {
       "success": "Your message has been sent successfully! We'll get back to you soon.",
       "error": "Oops, something went wrong. Please try again or email us at info@etechlo.com"
-    }
+    },
+    "prefillMessage": "I am interested in receiving more details about the {package} package. Please contact me as soon as possible."
   },
   "ProcessSection": {
     "title": "Our Process",
@@ -237,9 +238,10 @@
     ]
   },
   "PricingSection": {
-    "title": "Pricing & Engagement Models",
+    "title": "Pricing & Plans",
     "subtitle": "Transparent pricing tailored to your stage and needs. Exact final price depends on scope and complexity.",
-    "cta": "Request a custom quote"
+    "cta": "Request a custom quote",
+    "viewAll": "View All Packages"
   },
   "TestimonialsSection": {
     "title": "What Our Clients Say",

@@ -3,17 +3,16 @@ import HeroSection from "../components/HeroSection";
 import ServicesSection from "../components/ServicesSection";
 import TechSection from "../components/TechSection";
 import CaseStudiesSection from "../components/CaseStudiesSection";
-import PricingSection from "../components/PricingSection";
+import PricingSection from "../components/pricing/PricingSection";
 import ProcessSection from "../components/ProcessSection";
 import TestimonialsSection from "../components/testimonials/TestimonialsSection";
 import AboutSection from "../components/AboutSection";
 import ContactSection from "../components/ContactSection";
-import AnimatedSection from "../components/AnimatedSection";
+import AnimatedSection from "../components/AnimatedSection"
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      {/* <Header /> */}
       <main>
         <HeroSection />
         <AnimatedSection>

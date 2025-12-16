@@ -15,4 +15,4 @@ export const Card = styled.div<{ $bg?: string; $minHeight?: string }>`
     box-shadow: 0 6px 32px rgba(79, 182, 244, 0.13);
     transform: translateY(-4px) scale(1.03);
   }
-`; 
+`;

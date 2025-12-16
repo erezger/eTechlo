@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { Section } from "./shared/Section";
-import { SectionTitle } from "./shared/SectionTitle";
-import { Card } from "./shared/Card";
-import { PrimaryButton } from "./shared/PrimaryButton";
+import styled from 'styled-components';
+import { Section } from '../shared/Section';
+import { SectionTitle } from '../shared/SectionTitle';
+import { Card } from '../shared/Card';
+import { PrimaryButton } from '../shared/PrimaryButton';
 
 export { Section, SectionTitle, Card, PrimaryButton };
 
@@ -20,6 +20,7 @@ export const PricingGrid = styled.div`
   gap: 2rem;
   width: 100%;
   max-width: 1100px;
+  align-items: stretch;
 
   @media (max-width: 900px) {
     grid-template-columns: repeat(2, 1fr);
@@ -37,7 +38,7 @@ export const Price = styled.div`
   margin: 0.5rem 0 0.75rem;
 `;
 
-export const PriceNote = styled.p`
+export const PriceNote = styled.span`
   font-size: 0.85rem;
   color: var(--color-text);
   opacity: 0.8;
@@ -50,6 +51,11 @@ export const FeaturesList = styled.ul`
   margin: 0 0 1.5rem;
   font-size: 0.95rem;
   color: var(--color-text);
+  text-align: start;
+  `;
+
+export const FeatureItemTitle = styled.ul`
+  margin-bottom: 0.5rem;
 `;
 
 export const FeatureItem = styled.li`

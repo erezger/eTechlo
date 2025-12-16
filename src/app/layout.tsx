@@ -8,6 +8,7 @@ import { getLocale } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import ReactQueryProvider from '@/providers/ReactQueryProvider';
 import { Toaster } from 'react-hot-toast';
+import { PricingProvider } from '@/context/PricingContext';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const assistant = Assistant({ subsets: ["hebrew"], variable: "--font-assistant" });
@@ -58,16 +59,18 @@ export default async function RootLayout({
       </head>
       <body className={`${inter.variable} ${assistant.variable}`} style={{ direction: dir }}>
         <ReactQueryProvider>
-          <StyledComponentsRegistry>
-            <NextIntlClientProvider messages={messages} locale={locale}>
-              <Header />
-              {children}
-              <Footer />
-            </NextIntlClientProvider>
-          </StyledComponentsRegistry>
+          <PricingProvider>
+            <StyledComponentsRegistry>
+              <NextIntlClientProvider messages={messages} locale={locale}>
+                <Header />
+                {children}
+                <Footer />
+              </NextIntlClientProvider>
+            </StyledComponentsRegistry>
 
-          {/* **מיקום ה-Toast Provider:** */}
-          <Toaster />
+            {/* **מיקום ה-Toast Provider:** */}
+            <Toaster />
+          </PricingProvider>
         </ReactQueryProvider>
       </body>
     </html>

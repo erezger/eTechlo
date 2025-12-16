@@ -23,4 +23,7 @@ export const PrimaryButton = styled.a`
     cursor: not-allowed;
     transform: none;
   }
+`;
+export const PriceLink = styled(PrimaryButton)`
+  margin-top: auto;
 `; 
