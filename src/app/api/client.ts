@@ -10,6 +10,7 @@ export const apiClient: AxiosInstance = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
+  withCredentials: true, // קריטי! שולח cookies/credentials
 });
 
 // אנו יכולים להוסיף כאן Interceptors לטיפול אוטומטי ב-JWT אם יהיה צורך בעתיד.
